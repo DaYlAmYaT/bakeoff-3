@@ -77,11 +77,12 @@ description: "Task list for Fantasy Pickleball Game feature implementation"
 
 ### Backend Implementation
 - [x] T023 [P] [US2] Create Mongoose models: `Player`, `Bid`, `Team` in `backend/src/models/`
-- [ ] T024 [US2] Create seed script `backend/scripts/seedPlayers.js` to populate mock Professional Pickleball Players
-- [ ] T025 [US2] Implement Player listing endpoint (`GET /api/players`) in `backend/src/routes/playerRoutes.js`
-- [ ] T026 [US2] Implement active auctions listing (`GET /api/groups/:id/auctions`) in `backend/src/routes/auctionRoutes.js`
-- [ ] T027 [US2] Implement Bidding logic (`POST /api/auctions/:id/bid`), factoring in outstanding loans and current balance
-- [ ] T028 [US2] Implement Team management endpoints (`POST /api/teams`, `GET /api/teams/me`) validating 8-player roster size
+- [x] T024 [US2] Create seed script `backend/scripts/seedPlayers.js` to populate mock Professional Pickleball Players
+- [x] T025 [US2] Implement Player listing endpoint (`GET /api/players`) in `backend/src/routes/playerRoutes.js`
+- [x] T026 [US2] Implement active auctions listing (`GET /api/groups/:id/auctions`) in `backend/src/routes/auctionRoutes.js`
+- [x] T027 [US2] Implement Bidding logic (`POST /api/auctions/:id/bid`), factoring in outstanding loans and current balance
+
+- [x] T028 [US2] Implement Team management endpoints (`POST /api/teams`, `GET /api/teams/me`) validating 8-player roster size
 
 ### Frontend Implementation
 - [ ] T029 [P] [US2] Create `teamStore.js` in `frontend/src/stores/`

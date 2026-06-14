@@ -5,6 +5,9 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import groupRoutes from './routes/groupRoutes.js';
+import playerRoutes from './routes/playerRoutes.js';
+import auctionRoutes from './routes/auctionRoutes.js';
+import teamRoutes from './routes/teamRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -23,6 +26,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/groups', groupRoutes);
+app.use('/api/players', playerRoutes);
+app.use('/api', auctionRoutes);
+app.use('/api/teams', teamRoutes);
 
 // Root route
 app.get('/', (req, res) => {
