@@ -6,6 +6,19 @@ import { protect } from '../middleware/auth.js';
 
 const router = express.Router();
 
+// @route   GET /api/groups
+// @desc    Get all groups for the logged-in user
+// @access  Private
+router.get('/', protect, async (req, res, next) => {
+  try {
+    // Find groups where the user is a member and sort by newest first
+    const groups = await Group.find({ 'members.userId': req.user.id }).sort({ createdAt: -1 });
+    res.status(200).json(groups);
+  } catch (error) {
+    next(error);
+  }
+});
+
 // @route   POST /api/groups
 // @desc    Create a new fantasy group/league
 // @access  Private

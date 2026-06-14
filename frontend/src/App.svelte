@@ -1,5 +1,8 @@
 <script>
   import { Router, Route, links } from "svelte-routing";
+  import Home from "./pages/Home.svelte";
+  import GroupList from "./components/group/GroupList.svelte";
+  import GroupDetail from "./pages/GroupDetail.svelte";
 
   // The url property is required by svelte-routing for SSR, 
   // but it's also good practice for standard client-side routing.
@@ -17,20 +20,15 @@
   </nav>
 
   <main>
-    <Route path="/">
-      <h1>Welcome to Fantasy Pickleball</h1>
-      <p>Log in or sign up to start building your legacy.</p>
-    </Route>
+    <Route path="/" component={Home} />
 
     <Route path="/dashboard">
       <h1>Dashboard</h1>
       <p>Tournament stats and live rewards will appear here.</p>
     </Route>
 
-    <Route path="/groups/*">
-      <h1>Groups & Leagues</h1>
-      <p>Manage your fantasy pickleball groups.</p>
-    </Route>
+    <Route path="/groups" component={GroupList} />
+    <Route path="/groups/:id" component={GroupDetail} />
 
     <Route path="/auctions">
       <h1>Auction House</h1>

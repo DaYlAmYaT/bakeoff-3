@@ -61,11 +61,11 @@ description: "Task list for Fantasy Pickleball Game feature implementation"
 
 ### Frontend Implementation
 - [x] T017 [P] [US1] Create `authStore.js` and `groupStore.js` in `frontend/src/stores/`
-- [ ] T018 [P] [US1] Build `AuthForm.svelte` component in `frontend/src/components/auth/`
-- [ ] T019 [US1] Build `Home.svelte` page featuring login/registration
-- [ ] T020 [US1] Build `CreateGroupModal.svelte` with custom rules/budget settings
-- [ ] T021 [US1] Build `GroupList.svelte` component
-- [ ] T022 [US1] Build `GroupDetail.svelte` page to display group members and invite link
+- [x] T018 [P] [US1] Build `AuthForm.svelte` component in `frontend/src/components/auth/`
+- [x] T019 [US1] Build `Home.svelte` page featuring login/registration
+- [x] T020 [US1] Build `CreateGroupModal.svelte` with custom rules/budget settings
+- [x] T021 [US1] Build `GroupList.svelte` component
+- [x] T022 [US1] Build `GroupDetail.svelte` page to display group members and invite link
 
 **Checkpoint**: Users can authenticate, set up their budget, create groups, and join via links.
 
@@ -76,7 +76,7 @@ description: "Task list for Fantasy Pickleball Game feature implementation"
 **Goal**: Users bid on pro players (incorporating loans) and form an 8-player team.
 
 ### Backend Implementation
-- [ ] T023 [P] [US2] Create Mongoose models: `Player`, `Bid`, `Team` in `backend/src/models/`
+- [x] T023 [P] [US2] Create Mongoose models: `Player`, `Bid`, `Team` in `backend/src/models/`
 - [ ] T024 [US2] Create seed script `backend/scripts/seedPlayers.js` to populate mock Professional Pickleball Players
 - [ ] T025 [US2] Implement Player listing endpoint (`GET /api/players`) in `backend/src/routes/playerRoutes.js`
 - [ ] T026 [US2] Implement active auctions listing (`GET /api/groups/:id/auctions`) in `backend/src/routes/auctionRoutes.js`
