@@ -51,16 +51,16 @@ description: "Task list for Fantasy Pickleball Game feature implementation"
 **Goal**: Users can sign up, create custom budget accounts, form groups, and invite/join others.
 
 ### Backend Implementation
-- [ ] T010 [P] [US1] Create `User` Mongoose model in `backend/src/models/User.js`
-- [ ] T011 [P] [US1] Create `Group` Mongoose model in `backend/src/models/Group.js`
-- [ ] T012 [US1] Implement Auth routes (`POST /api/auth/register`, `POST /api/auth/login`) supporting custom default starting budgets in `backend/src/routes/authRoutes.js`
-- [ ] T013 [US1] Implement User route (`GET /api/users/me`) in `backend/src/routes/userRoutes.js`
-- [ ] T014 [US1] Implement Group creation and token generation (`POST /api/groups`) in `backend/src/routes/groupRoutes.js`
-- [ ] T015 [US1] Implement Group join logic (`POST /api/groups/join/:token`) allocating initial member balances
-- [ ] T016 [US1] Implement Group details fetch (`GET /api/groups/:id`)
+- [x] T010 [P] [US1] Create `User` Mongoose model in `backend/src/models/User.js`
+- [x] T011 [P] [US1] Create `Group` Mongoose model in `backend/src/models/Group.js`
+- [x] T012 [US1] Implement Auth routes (`POST /api/auth/register`, `POST /api/auth/login`) supporting custom default starting budgets in `backend/src/routes/authRoutes.js`
+- [x] T013 [US1] Implement User route (`GET /api/users/me`) in `backend/src/routes/userRoutes.js`
+- [x] T014 [US1] Implement Group creation and token generation (`POST /api/groups`) in `backend/src/routes/groupRoutes.js`
+- [x] T015 [US1] Implement Group join logic (`POST /api/groups/join/:token`) allocating initial member balances
+- [x] T016 [US1] Implement Group details fetch (`GET /api/groups/:id`)
 
 ### Frontend Implementation
-- [ ] T017 [P] [US1] Create `authStore.js` and `groupStore.js` in `frontend/src/stores/`
+- [x] T017 [P] [US1] Create `authStore.js` and `groupStore.js` in `frontend/src/stores/`
 - [ ] T018 [P] [US1] Build `AuthForm.svelte` component in `frontend/src/components/auth/`
 - [ ] T019 [US1] Build `Home.svelte` page featuring login/registration
 - [ ] T020 [US1] Build `CreateGroupModal.svelte` with custom rules/budget settings
