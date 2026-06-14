@@ -1,8 +1,11 @@
 <script>
-  import { Router, Route, links } from "svelte-routing";
+  import { Router, Route, links, navigate } from "svelte-routing";
   import Home from "./pages/Home.svelte";
   import GroupList from "./components/group/GroupList.svelte";
   import GroupDetail from "./pages/GroupDetail.svelte";
+  import AuctionHouse from "./pages/AuctionHouse.svelte";
+  import MyTeam from "./pages/MyTeam.svelte";
+  import { authStore } from "./stores/authStore.js";
 
   // The url property is required by svelte-routing for SSR, 
   // but it's also good practice for standard client-side routing.
@@ -12,11 +15,14 @@
 <Router {url}>
   <nav use:links>
     <a href="/">Home</a>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/groups">Groups</a>
-    <a href="/auctions">Auction House</a>
-    <a href="/my-team">My Team</a>
-    <a href="/trade-market">Trade Market</a>
+    {#if $authStore.isAuthenticated}
+      <a href="/dashboard">Dashboard</a>
+      <a href="/groups">Groups</a>
+      <a href="/auctions">Auction House</a>
+      <a href="/my-team">My Team</a>
+      <a href="/trade-market">Trade Market</a>
+      <button class="logout-btn" on:click={() => { authStore.logout(); navigate('/', { replace: true }); }}>Logout</button>
+    {/if}
   </nav>
 
   <main>
@@ -30,15 +36,9 @@
     <Route path="/groups" component={GroupList} />
     <Route path="/groups/:id" component={GroupDetail} />
 
-    <Route path="/auctions">
-      <h1>Auction House</h1>
-      <p>Bid on pro players to build your team!</p>
-    </Route>
+    <Route path="/auctions" component={AuctionHouse} />
 
-    <Route path="/my-team">
-      <h1>My Team</h1>
-      <p>Assign your acquired players to tournament categories.</p>
-    </Route>
+    <Route path="/my-team" component={MyTeam} />
 
     <Route path="/trade-market">
       <h1>Trade Market</h1>
@@ -53,6 +53,7 @@
     background-color: #f3f4f6;
     display: flex;
     gap: 1.5rem;
+    align-items: center;
     border-bottom: 2px solid #e5e7eb;
   }
   a {
@@ -62,6 +63,19 @@
   }
   a:hover {
     color: #2563eb;
+  }
+  .logout-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .logout-btn:hover {
+    text-decoration: underline;
   }
   main {
     padding: 2rem;

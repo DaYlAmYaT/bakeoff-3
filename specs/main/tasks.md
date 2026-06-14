@@ -85,11 +85,11 @@ description: "Task list for Fantasy Pickleball Game feature implementation"
 - [x] T028 [US2] Implement Team management endpoints (`POST /api/teams`, `GET /api/teams/me`) validating 8-player roster size
 
 ### Frontend Implementation
-- [ ] T029 [P] [US2] Create `teamStore.js` in `frontend/src/stores/`
-- [ ] T030 [US2] Build `PlayerCard.svelte` and `BiddingInterface.svelte` in `frontend/src/components/auction/`
-- [ ] T031 [US2] Build `AuctionHouse.svelte` page
-- [ ] T032 [US2] Build `RosterGrid.svelte` component (displaying the 8 slots)
-- [ ] T033 [US2] Build `MyTeam.svelte` page
+- [x] T029 [P] [US2] Create `teamStore.js` in `frontend/src/stores/`
+- [x] T030 [US2] Build `PlayerCard.svelte` and `BiddingInterface.svelte` in `frontend/src/components/auction/`
+- [x] T031 [US2] Build `AuctionHouse.svelte` page
+- [x] T032 [US2] Build `RosterGrid.svelte` component (displaying the 8 slots)
+- [x] T033 [US2] Build `MyTeam.svelte` page
 
 **Checkpoint**: Bidding phase works; users can spend their Pickle Bucks and assemble their rosters.
 
